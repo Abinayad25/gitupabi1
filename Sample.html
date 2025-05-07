@@ -1,0 +1,41 @@
+<head>
+    <title>Print Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #printArea {
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function printContent() {
+            var printContents = document.getElementById("printArea").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Simple HTML Print Example</h2>
+
+<div id="printArea">
+    <h3>This content will be printed</h3>
+    <p>Hello! This is a simple message to print using HTML and JavaScript.</p>
+</div>
+
+<button onclick="printContent()">Print This Section</button>
+
+</body>
